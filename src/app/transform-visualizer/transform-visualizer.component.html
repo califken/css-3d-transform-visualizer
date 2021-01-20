@@ -1,0 +1,125 @@
+<div class="p-grid">
+	<div class="p-lg-4 p-md-12">
+		<div class="scene" [style]="'perspective: '+cardperspective+'px;'">
+			<div class="card" [style]="'transform: rotateX('+cardrotatex+'deg)  rotateY('+cardrotatey+'deg)  rotateZ('+cardrotatez+'deg) translateX('+cardtranslatex+'px)  translateY('+cardtranslatey+'px)  translateZ('+cardtranslatez+'px) 
+'">
+				<div class="card__face card__face--front"> Any Element
+					<hr>
+					<div contenteditable="true">Any Content!
+						<br>(editable content)</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p-lg-8 p-md-12">
+			<h1>CSS 3d Transform Visualizer</h1>
+		</div>
+	</div>
+	<div class="p-grid">
+		<div class="p-md-12 p-lg-6">
+			<div class="codebox"><code>
+        <div class="p-grid">
+          <div class="p-col-fixed" class="col-knob">
+            <p-knob [(ngModel)]="cardrotatex" [min]="-360" [max]="360"></p-knob>
+          </div>
+          <div class="p-col control-details">
+            <h5>rotateX</h5>
+            transform: rotateY({{cardrotatex}}deg);
+            <div class="desc">The rotateX() method rotates an element around its Y-axis at a given degree:</div>
+          </div>
+        </div>
+      </code> </div>
+		</div>
+		<div class="p-md-12 p-lg-6">
+			<div class="codebox"><code>
+        <div class="p-grid">
+          <div class="p-col-fixed" class="col-knob">
+            <p-knob [(ngModel)]="cardtranslatex" [min]="-1000" [max]="1000"></p-knob>
+          </div>
+          <div class="p-col control-details">
+            <h5>translateX</h5>
+            transform: translateX({{cardtranslatex}}px);
+            <div class="desc">The rotateX() method rotates an element around its Y-axis at a given degree:</div>
+          </div>
+        </div>
+      </code> </div>
+		</div>
+	</div>
+	<div class="p-grid">
+		<div class="p-md-12 p-lg-6">
+			<div class="codebox"><code>
+        <div class="p-grid">
+          <div class="p-col-fixed" class="col-knob">
+            <p-knob [(ngModel)]="cardrotatey" [min]="-360" [max]="360"></p-knob>
+          </div>
+          <div class="p-col control-details">
+            <h5>rotateY</h5>
+            transform: rotateY({{cardrotatey}}deg);
+            <div class="desc">The rotateY() method rotates an element around its Y-axis at a given degree:</div>
+          </div>
+        </div>
+      </code> </div>
+		</div>
+		<div class="p-md-12 p-lg-6">
+			<div class="codebox"><code>
+        <div class="p-grid">
+          <div class="p-col-fixed" class="col-knob">
+            <p-knob [(ngModel)]="cardtranslatey" [min]="-1000" [max]="1000"></p-knob>
+          </div>
+          <div class="p-col control-details">
+            <h5>translateY</h5>
+            transform: translateY({{cardtranslatey}}px);
+            <div class="desc">The rotateX() method rotates an element around its Y-axis at a given degree:</div>
+          </div>
+        </div>
+      </code> </div>
+		</div>
+	</div>
+	<div class="p-grid">
+		<div class="p-md-12 p-lg-6">
+			<div class="codebox"><code>
+        <div class="p-grid">
+          <div class="p-col-fixed" class="col-knob">
+            <p-knob [(ngModel)]="cardrotatez" [min]="-360" [max]="360"></p-knob>
+          </div>
+          <div class="p-col control-details">
+            <h5>rotateZ</h5>
+            transform: rotateZ({{cardrotatez}}deg);
+            <div class="desc">The rotateZ() method rotates an element around its Y-axis at a given degree:</div>
+          </div>
+        </div>
+      </code> </div>
+		</div>
+		<div class="p-md-12 p-lg-6">
+			<div class="codebox"><code>
+        <div class="p-grid">
+          <div class="p-col-fixed" class="col-knob">
+            <p-knob [(ngModel)]="cardtranslatez" [min]="-1000" [max]="1000"></p-knob>
+          </div>
+          <div class="p-col control-details">
+            <h5>translateZ</h5>
+            transform: translateZ({{cardtranslatez}}px);
+            <div class="desc">The rotateX() method rotates an element around its Y-axis at a given degree:</div>
+          </div>
+        </div>
+      </code> </div>
+		</div>
+	</div>
+	<div class="p-grid">
+		<div class="p-md-12 p-lg-6 p-lg-offset-3">
+			<div class="codebox"><code>
+        <div class="p-grid">
+          <div class="p-col-fixed" class="col-knob">
+            <input type="text" pInputText style="width:100%;" [(ngModel)]="cardperspective" readonly />
+            <p-slider [min]="0" [max]="1000" [(ngModel)]="cardperspective"></p-slider>
+          </div>
+          <div class="p-col control-details">
+            <h5>Perspective</h5>
+            perspective: {{cardperspective}}px;
+            <div class="desc">The perspective property defines how far the object is away from the user. So, a lower
+              value will result in a more intensive 3D effect than a higher value.</div>
+          </div>
+        </div>
+      </code> </div>
+		</div>
+	</div>
